@@ -1,8 +1,18 @@
 {
   "name": "getdomdata",
-  "private": true,
   "version": "0.0.1",
+  "description": "get dom data to object",
+  "keywords": [
+    "data",
+    "getData",
+    "stringToObject"
+  ],
+  "main": "index.js",
+  "author": "wolfgang jungmayer",
+  "license": "MIT",
+  "private": false,
   "type": "module",
+  "homepage": "https://github.com/lemon3/getdomdata",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -22,10 +32,7 @@
     "jsdom": "^24.0.0",
     "prettier": "^3.2.5",
     "vite": "^5.2.0",
+    "vite-plugin-banner": "^0.7.1",
     "vitest": "^1.4.0"
-  },
-  "dependencies": {
-    "immutable": "5.0.0-beta.5",
-    "lodash.merge": "^4.6.2"
   }
 }

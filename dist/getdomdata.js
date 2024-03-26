@@ -1,3 +1,7 @@
+/*!
+* getdomdata v0.0.1
+* https://github.com/lemon3/getdomdata
+*/
 const p = (t) => t && typeof t == "object", n = (...t) => {
   const r = {};
   let a, e;
