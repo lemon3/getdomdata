@@ -1,5 +1,4 @@
 /* global __dirname */
-// vite.config.js
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import { configDefaults } from 'vitest/config';
@@ -15,7 +14,6 @@ import { configDefaults } from 'vitest/config';
 // `;
 
 export default defineConfig({
-  base: '/getdomdata/',
   build: {
     target: 'esnext', // es2015
     // minify: 'terser',
@@ -30,7 +28,7 @@ export default defineConfig({
     },
     copyPublicDir: false,
     rollupOptions: {
-      input: ['./index.html'],
+      // input: ['./index.html'],
       output: {
         // banner,
         footer: `
