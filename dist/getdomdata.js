@@ -33,7 +33,7 @@ const p = (e) => e && typeof e == "object", y = (...e) => {
   e = e.replace(/[\\ \t\n\r'"]/gm, "").replace(/(\w+)/gi, '"$1"'), e[0] !== "{" && (e = `{${e}}`);
   try {
     return JSON.parse(e);
-  } catch (t) {
+  } catch {
     return !1;
   }
 }, O = (e) => {
@@ -42,7 +42,7 @@ const p = (e) => e && typeof e == "object", y = (...e) => {
   e = e.replace(/'/g, '"');
   try {
     return JSON.parse(e);
-  } catch (t) {
+  } catch {
     return b(e);
   }
 }, A = (e, t) => {
