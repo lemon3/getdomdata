@@ -1,0 +1,30 @@
+{
+  "name": "getdomdata",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write 'src/**/*.*'",
+    "test": "vitest",
+    "bench": "vitest bench",
+    "coverage": "vitest --coverage"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.3",
+    "@babel/preset-env": "^7.24.3",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@vitest/coverage-v8": "^1.4.0",
+    "eslint": "^8.57.0",
+    "jsdom": "^24.0.0",
+    "prettier": "^3.2.5",
+    "vite": "^5.2.0",
+    "vitest": "^1.4.0"
+  },
+  "dependencies": {
+    "immutable": "5.0.0-beta.5",
+    "lodash.merge": "^4.6.2"
+  }
+}

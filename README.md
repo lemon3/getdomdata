@@ -1,2 +1,5 @@
 # getdomdata
- get string-date stored to a dom element as object
+ get string-data stored to a dom element as object
+
+## usage
+tbd.
