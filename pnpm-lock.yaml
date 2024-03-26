@@ -4,14 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  immutable:
-    specifier: 5.0.0-beta.5
-    version: 5.0.0-beta.5
-  lodash.merge:
-    specifier: ^4.6.2
-    version: 4.6.2
-
 devDependencies:
   '@babel/core':
     specifier: ^7.24.3
@@ -37,6 +29,9 @@ devDependencies:
   vite:
     specifier: ^5.2.0
     version: 5.2.3
+  vite-plugin-banner:
+    specifier: ^0.7.1
+    version: 0.7.1
   vitest:
     specifier: ^1.4.0
     version: 1.4.0(jsdom@24.0.0)
@@ -2415,10 +2410,6 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
-  /immutable@5.0.0-beta.5:
-    resolution: {integrity: sha512-1RO6wxfJdh/uyWb2MTn3RuCPXYmpRiAhoKm8vEnA50+2Gy0j++6GBtu5q6sq2d4tpcL+e1sCHzk8NkWnRhT2/Q==}
-    dev: false
-
   /import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -2631,6 +2622,7 @@ packages:
 
   /lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
+    dev: true
 
   /loupe@2.3.7:
     resolution: {integrity: sha512-zSMINGVYkdpYSOBmLi0D1Uo7JU9nVdQKrHxC8eYlV+9YKK9WePqAlL7lSlorG/U2Fw1w0hTBmaa/jrQ3UbPHtA==}
@@ -3253,6 +3245,10 @@ packages:
       - sugarss
       - supports-color
       - terser
+    dev: true
+
+  /vite-plugin-banner@0.7.1:
+    resolution: {integrity: sha512-Bww2Xd5tOGsZ1yZ9rQiGneryvsL1u86znPrqeQjCsXPsG72pnSdV5lcQA+cy8UNDguMqyTJiCevlNUbLnT85UA==}
     dev: true
 
   /vite@5.2.3:
