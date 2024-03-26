@@ -3,15 +3,14 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import { configDefaults } from 'vitest/config';
 
-// import pkg from './package.json';
+import banner from 'vite-plugin-banner';
+import pkg from './package.json';
 // import babel from '@rollup/plugin-babel';
 
-// const banner = `
-// /*!
-// * getdomdata v${pkg.version}
-// * https://github.com/lemon3
-// */
-// `;
+const bannerText = `/*!
+* getdomdata v${pkg.version}
+* ${pkg.homepage}
+*/`;
 
 export default defineConfig({
   build: {
@@ -58,4 +57,6 @@ export default defineConfig({
       },
     ],
   },
+
+  plugins: [banner(bannerText)],
 });
