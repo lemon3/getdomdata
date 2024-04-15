@@ -1,5 +1,6 @@
+/* eslint-disable quotes */
 import { expect, test } from 'vitest';
-import { getDomData } from '@/getDomData';
+import getDomData from '@/getDomData';
 
 test.each([
   {

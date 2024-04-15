@@ -1,19 +1,19 @@
 /*!
-* getdomdata v0.0.2
+* getdomdata v0.0.3
 * https://github.com/lemon3/getdomdata
 */
-const f = (e) => e && typeof e == "object", u = (...e) => {
+const p = (e) => e && typeof e == "object", u = (...e) => {
   const r = {};
   let c, t;
   return e.forEach((o) => {
     for (let a in o)
-      c = r[a], t = o[a], Array.isArray(c) && Array.isArray(t) ? r[a] = c.concat(...t) : f(c) && f(t) ? r[a] = u(c, t) : r[a] = t;
+      c = r[a], t = o[a], Array.isArray(c) && Array.isArray(t) ? r[a] = c.concat(...t) : p(c) && p(t) ? r[a] = u(c, t) : r[a] = t;
   }), r;
 }, b = (e) => {
   e = e.replace(/[\\ \t\n\r'"]/gm, "").replace(/(\w+)/gi, '"$1"'), e[0] !== "{" && (e = `{${e}}`);
   try {
     return JSON.parse(e);
-  } catch {
+  } catch (r) {
     return !1;
   }
 }, i = (e) => {
@@ -22,7 +22,7 @@ const f = (e) => e && typeof e == "object", u = (...e) => {
   e = e.replace(/'/g, '"');
   try {
     return JSON.parse(e);
-  } catch {
+  } catch (r) {
     return b(e);
   }
 }, h = (e, r) => {
@@ -32,11 +32,11 @@ const f = (e) => e && typeof e == "object", u = (...e) => {
   return e.getAttributeNames().filter((t) => t.substr(0, 5) === "data-").forEach((t) => {
     const o = t.substr(5).split("-"), a = o.length, n = e.getAttribute(t), l = {};
     let s = l;
-    o.forEach((p, y) => {
-      s[p] = a - 1 !== y ? {} : i(n), s = s[p];
+    o.forEach((f, y) => {
+      s[f] = a - 1 !== y ? {} : i(n), s = s[f];
     }), c = u(c, l);
   }), r ? c[r] : c;
 };
 export {
-  h as getDomData
+  h as default
 };

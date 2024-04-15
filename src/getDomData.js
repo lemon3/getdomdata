@@ -8,6 +8,7 @@ const parseData = (string) => {
   string = string.replace(/'/g, '"');
   try {
     return JSON.parse(string);
+    // eslint-disable-next-line no-unused-vars
   } catch (e) {
     return getObjectFromString(string);
   }
@@ -20,7 +21,7 @@ const parseData = (string) => {
  * @param  {String} name The name to look for
  * @return {mixed} Object with all collected data for the given element und name or false
  */
-export const getDomData = (el, name) => {
+const getDomData = (el, name) => {
   if (!el || 'object' !== typeof el) {
     return false;
   }
@@ -47,3 +48,5 @@ export const getDomData = (el, name) => {
 
   return name ? obj[name] : obj;
 };
+
+export { getDomData as default };

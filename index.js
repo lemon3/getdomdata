@@ -1,2 +1,2 @@
-import { getDomData } from './dist/getdomdata.js';
-export default getDomData;
+import getDomData from './dist/getdomdata.js';
+export { getDomData as default };

@@ -14,7 +14,7 @@ const bannerText = `/*!
 
 export default defineConfig({
   build: {
-    target: 'esnext', // es2015
+    target: 'es2015', // esnext
     // minify: 'terser',
     lib: {
       entry: resolve(__dirname, 'src/getDomData.js'),
@@ -36,6 +36,7 @@ export default defineConfig({
       exclude: [...configDefaults.exclude, '_notes/**', 'test/*.bench.*'],
     },
   },
+
   resolve: {
     alias: [
       {

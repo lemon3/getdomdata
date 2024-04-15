@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.0.3
+### Added or Changed
+- bug fixing
+
 ## v0.0.2
 ### Added or Changed
 - umd js fix
