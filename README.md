@@ -5,7 +5,7 @@ get string-data stored to a dom element as object.
 ```Bash
 npm install getdomdata
 ```
-demo html file
+demo html file:
 ```html
 <div id="test"
   data-test="{p1:'cat',p2:'dog',id:1,tmp:true,a:null}"

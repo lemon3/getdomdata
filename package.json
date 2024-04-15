@@ -1,25 +1,19 @@
 {
   "name": "getdomdata",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "get dom data to object",
-  "keywords": [
-    "data",
-    "getData",
-    "stringToObject"
-  ],
-  "main": "index.js",
   "author": "wolfgang jungmayer",
   "license": "MIT",
-  "private": false,
+  "browser": "dist/getdomdata.umd.js",
   "type": "module",
-  "homepage": "https://github.com/lemon3/getdomdata",
-  "files": [
-    "LICENSE",
-    "dist",
-    "index.js",
-    "package.json",
-    "README.md"
-  ],
+  "main": "./dist/getdomdata.umd.js",
+  "module": "./dist/getdomdata.js",
+  "exports": {
+    ".": {
+      "import": "./dist/getdomdata.js",
+      "require": "./dist/getdomdata.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -30,6 +24,20 @@
     "bench": "vitest bench",
     "coverage": "vitest --coverage"
   },
+  "private": false,
+  "homepage": "https://github.com/lemon3/getdomdata",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist",
+    "index.js",
+    "package.json"
+  ],
+  "keywords": [
+    "data",
+    "getData",
+    "stringToObject"
+  ],
   "devDependencies": {
     "@babel/core": "^7.24.3",
     "@babel/preset-env": "^7.24.3",
@@ -38,7 +46,7 @@
     "eslint": "^8.57.0",
     "jsdom": "^24.0.0",
     "prettier": "^3.2.5",
-    "vite": "^5.2.0",
+    "vite": "^5.2.3",
     "vite-plugin-banner": "^0.7.1",
     "vitest": "^1.4.0"
   }

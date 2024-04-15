@@ -26,19 +26,6 @@ export default defineConfig({
       },
     },
     copyPublicDir: false,
-    rollupOptions: {
-      // input: ['./index.html'],
-      output: {
-        // banner,
-        footer: `
-          if (globalThis.getDomData) {
-            for (const key of Object.keys(globalThis.getDomData)) {
-              globalThis[key] = globalThis.getDomData[key]
-            }
-          }
-        `,
-      },
-    },
   },
   // plugins: [babel({ babelHelpers: 'bundled' })],
   test: {

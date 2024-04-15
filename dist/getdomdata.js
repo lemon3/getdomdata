@@ -1,45 +1,42 @@
 /*!
-* getdomdata v0.0.1
+* getdomdata v0.0.2
 * https://github.com/lemon3/getdomdata
 */
-const p = (t) => t && typeof t == "object", n = (...t) => {
+const f = (e) => e && typeof e == "object", u = (...e) => {
   const r = {};
-  let a, e;
-  return t.forEach((c) => {
-    for (let o in c)
-      a = r[o], e = c[o], Array.isArray(a) && Array.isArray(e) ? r[o] = a.concat(...e) : p(a) && p(e) ? r[o] = n(a, e) : r[o] = e;
+  let c, t;
+  return e.forEach((o) => {
+    for (let a in o)
+      c = r[a], t = o[a], Array.isArray(c) && Array.isArray(t) ? r[a] = c.concat(...t) : f(c) && f(t) ? r[a] = u(c, t) : r[a] = t;
   }), r;
-}, i = (t) => {
-  t = t.replace(/[\\ \t\n\r'"]/gm, "").replace(/(\w+)/gi, '"$1"'), t[0] !== "{" && (t = `{${t}}`);
+}, b = (e) => {
+  e = e.replace(/[\\ \t\n\r'"]/gm, "").replace(/(\w+)/gi, '"$1"'), e[0] !== "{" && (e = `{${e}}`);
   try {
-    return JSON.parse(t);
+    return JSON.parse(e);
   } catch {
     return !1;
   }
-}, h = (t) => {
-  if (!t.match(/[^\w]+/i))
-    return t;
-  t = t.replace(/'/g, '"');
+}, i = (e) => {
+  if (!e.match(/[^\w]+/i))
+    return e;
+  e = e.replace(/'/g, '"');
   try {
-    return JSON.parse(t);
+    return JSON.parse(e);
   } catch {
-    return i(t);
+    return b(e);
   }
-}, y = (t, r) => {
-  if (!t || typeof t != "object")
+}, h = (e, r) => {
+  if (!e || typeof e != "object")
     return !1;
-  let a = {};
-  return t.getAttributeNames().filter((e) => e.substr(0, 5) === "data-").forEach((e) => {
-    const c = e.substr(5).split("-"), o = c.length, u = t.getAttribute(e), l = {};
+  let c = {};
+  return e.getAttributeNames().filter((t) => t.substr(0, 5) === "data-").forEach((t) => {
+    const o = t.substr(5).split("-"), a = o.length, n = e.getAttribute(t), l = {};
     let s = l;
-    c.forEach((f, b) => {
-      s[f] = o - 1 !== b ? {} : h(u), s = s[f];
-    }), a = n(a, l);
-  }), r ? a[r] : a;
+    o.forEach((p, y) => {
+      s[p] = a - 1 !== y ? {} : i(n), s = s[p];
+    }), c = u(c, l);
+  }), r ? c[r] : c;
 };
-if (globalThis.getDomData)
-  for (const t of Object.keys(globalThis.getDomData))
-    globalThis[t] = globalThis.getDomData[t];
 export {
-  y as getDomData
+  h as getDomData
 };
