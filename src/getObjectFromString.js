@@ -1,7 +1,7 @@
 export const getObjectFromString = (string) => {
   string = string.replace(/[\\ \t\n\r'"]/gm, '').replace(/(\w+)/gi, '"$1"');
   if ('{' !== string[0]) string = `{${string}}`;
-  string = string.replace(',}', '}');
+  string = string.replaceAll(',}', '}');
   try {
     return JSON.parse(string);
     // eslint-disable-next-line no-unused-vars
