@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.0.4
+### Added or Changed
+- improvement
+
 ## v0.0.3
 ### Added or Changed
 - bug fixing
